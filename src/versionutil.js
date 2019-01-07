@@ -58,9 +58,7 @@ function updatePlatformsConfig (newValues) {
     flagutil.computeReposFromFlag('active-platform')
         .forEach(function (repo) {
             if (newValues[repo.id]) {
-            // For blackberry platformsConfig.json uses 'blackberry10' key
-                var correctRepoId = (repo.id === 'blackberry') ? 'blackberry10' : repo.id;
-                platformsJS[correctRepoId].version = newValues[repo.id];
+                platformsJS[repo.id].version = newValues[repo.id];
             }
         });
 
@@ -100,9 +98,11 @@ exports.updateRepoVersion = function * updateRepoVersion (repo, version, opts) {
         });
 
         shelljs.config.fatal = true;
+
         glob.sync('{bin/,}template{s,}/{scripts/,}cordova/version').forEach(f => {
             shelljs.sed('-i', /\bVERSION\s*=.+?;/, `VERSION = '${version}';`, f);
         });
+
         if (repo.id === 'android') {
             shelljs.sed('-i', /CORDOVA_VERSION.*=.*;/, 'CORDOVA_VERSION = "' + version + '";', path.join('framework', 'src', 'org', 'apache', 'cordova', 'CordovaWebView.java'));
             // Set build.gradle version, vcsTag, and name
