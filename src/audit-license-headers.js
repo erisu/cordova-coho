@@ -47,7 +47,7 @@ var COMMON_RAT_EXCLUDES = [
     // Other
     '.*',
     '*.json', // Excludes all JSON files because commenting is not supported.
-    '*.txt', // Excludes all text files because commenting is not supported.
+    '*.txt', // Excludes all text files
     'VERSION',
     'node_modules',
     'thirdparty'
