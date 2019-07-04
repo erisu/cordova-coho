@@ -25,7 +25,8 @@
     "semver": "^4.2.0",
     "shelljs": "0.1.4",
     "treeify": "^1.0.1",
-    "xml2js": "0.4.17"
+    "xml2js": "0.4.17",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "eslint": "^5.12.0",
@@ -45,7 +46,9 @@
     "tape-test": "node test/test.js | tap-spec",
     "cover": "istanbul cover --root src --print detail jasmine",
     "jasmine": "jasmine",
-    "eslint": "eslint test && eslint src"
+    "eslint": "eslint test && eslint src",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -59,5 +62,6 @@
     "steven gill",
     "Brian LeRoux"
   ],
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "snyk": true
 }
