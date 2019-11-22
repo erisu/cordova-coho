@@ -111,7 +111,7 @@ function * createArchive (repo, tag, outDir, sign) {
     var outPath;
     if (repo.id !== 'mobile-spec') {
         var pkgInfo = require(path.resolve('package'));
-        var tgzname = pkgInfo.name + '-' + tag + '.tgz';
+        var tgzname = pkgInfo.name.replace('@', '').replace('/', '-') + '-' + tag + '.tgz';
         yield executil.execHelper(executil.ARGS('npm pack'), 1, false);
         outPath = path.join(outDir, tgzname);
         if (path.resolve(tgzname) !== outPath) {
