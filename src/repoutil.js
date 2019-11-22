@@ -242,6 +242,11 @@ var toolRepos = [
         id: 'node-xcode',
         repoName: 'cordova-node-xcode',
         jiraComonentName: 'node-xcode'
+    }, {
+        title: 'Cordova ESlint',
+        id: 'eslint',
+        repoName: 'cordova-eslint',
+        jiraComonentName: 'cordova-eslint'
     }
 ];
 
