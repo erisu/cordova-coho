@@ -27,7 +27,6 @@ var TIMEOUT = 60000;
 var androidRepo = { title: 'Android',
     id: 'android',
     repoName: 'cordova-android',
-    jiraComponentName: 'Android',
     cordovaJsPaths: [ 'bin/templates/project/assets/www/cordova.js' ],
     remoteName: 'origin' };
 

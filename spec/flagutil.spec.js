@@ -40,7 +40,6 @@ describe('flagutil unit tests', function () {
                 versions: [ '4.4', '5.0', '5.1', '6.0', '7.0', '7.1' ],
                 id: 'android',
                 repoName: 'cordova-android',
-                jiraComponentName: 'cordova-android',
                 cordovaJsPaths: [ 'bin/templates/project/assets/www/cordova.js' ] }) ]
         );
     }, TIMEOUT);
@@ -50,8 +49,8 @@ describe('flagutil unit tests', function () {
         expect(repo).toEqual(
             [ { title: 'Plugin - Camera',
                 id: 'plugin-camera',
-                repoName: 'cordova-plugin-camera',
-                jiraComponentName: 'cordova-plugin-camera' } ]
+                repoName: 'cordova-plugin-camera'
+            } ]
         );
     }, TIMEOUT);
 
@@ -60,8 +59,8 @@ describe('flagutil unit tests', function () {
         expect(repo).toEqual(
             [ { title: 'Docs',
                 id: 'docs',
-                repoName: 'cordova-docs',
-                jiraComponentName: 'cordova-docs' } ]
+                repoName: 'cordova-docs'
+            } ]
         );
     }, TIMEOUT);
 

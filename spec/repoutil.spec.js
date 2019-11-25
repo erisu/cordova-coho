@@ -31,7 +31,6 @@ var TIMEOUT = 60000;
 var androidRepo = { title: 'Android',
     id: 'android',
     repoName: 'cordova-android',
-    jiraComponentName: 'Android',
     cordovaJsPaths: [ 'bin/templates/project/assets/www/cordova.js' ],
     remoteName: 'origin' };
 
@@ -81,7 +80,6 @@ describe('check functionality of repoutil', function () {
                 id: 'android',
                 versions: [ '4.4', '5.0', '5.1', '6.0', '7.0', '7.1' ],
                 repoName: 'cordova-android',
-                jiraComponentName: 'cordova-android',
                 cordovaJsPaths: [ 'bin/templates/project/assets/www/cordova.js' ] }
         ));
         // Return null if opt repos are passed in
