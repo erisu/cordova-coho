@@ -441,12 +441,12 @@ var allRepos = platformRepos.concat(nonPlatformRepos,
     otherRepos);
 
 var repoGroups = {
-    'all': allRepos,
-    'platform': platformRepos,
-    'platforms': platformRepos,
-    'plugin': pluginRepos,
-    'plugins': pluginRepos,
-    'tools': toolRepos,
+    all: allRepos,
+    platform: platformRepos,
+    platforms: platformRepos,
+    plugin: pluginRepos,
+    plugins: pluginRepos,
+    tools: toolRepos,
     'active-platform': platformRepos.filter(function (r) { return !r.inactive; }),
     'active-platforms': platformRepos.filter(function (r) { return !r.inactive; }),
     'active-plugins': pluginRepos.filter(function (r) { return !r.inactive; }),

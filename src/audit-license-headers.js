@@ -68,14 +68,13 @@ function isComment (pattern) {
 }
 
 module.exports = function * () {
-
     var opt = flagutil.registerRepoFlag(optimist);
     opt = flagutil.registerHelpFlag(opt);
 
     opt.usage('Uses Apache RAT to audit source files for license headers.\n' +
               '\n' +
               'Usage: $0 audit-license-headers --repo=name [-r repos]');
-    let argv = opt.argv;
+    const argv = opt.argv;
 
     if (argv.h) {
         optimist.showHelp();
@@ -116,7 +115,6 @@ module.exports.scrubRepos = function * (repos, silent, ignoreError, win, fail) {
 
         // read in exclude patterns from repo's .ratignore, one pattern per line
         if (fs.existsSync(RAT_IGNORE_PATH)) {
-
             var ratignoreFile = fs.readFileSync(RAT_IGNORE_PATH);
             var ratignoreLines = ratignoreFile.toString().trim().split('\n');
 

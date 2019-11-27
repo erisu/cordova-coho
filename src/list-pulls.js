@@ -147,12 +147,12 @@ function listGitHubPullRequests (repo, maxAge, hideUser, short, statsOnly, callb
 
         function next () {
             var cbObj = {
-                'repo': repo,
+                repo: repo,
                 'fresh-count': 0,
                 'old-count': 0,
                 'stale-count': 0,
                 'total-count': origCount,
-                'message': null
+                message: null
             };
 
             if (hideUser) {
@@ -267,11 +267,11 @@ function * listPullRequestsCommand () {
 
     var repos = flagutil.computeReposFromFlag(argv.r);
     var report = {
-        'title': 'coho list-pulls report',
+        title: 'coho list-pulls report',
         // "command" : process.argv,
-        'timestamp': new Date().toJSON(),
+        timestamp: new Date().toJSON(),
         'max-age': argv['max-age'],
-        'repos': []
+        repos: []
     };
     var simple_report = [];
 

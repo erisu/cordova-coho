@@ -50,7 +50,6 @@ exports.removeDev = removeDev;
 // and the new version as value
 // ex {android:4.0.0}
 function updatePlatformsConfig (newValues) {
-
     var platformsConfig = path.join(repoutil.getRepoDir(repoutil.getRepoById('lib')),
         'src/platforms/platformsConfig.json');
     var platformsJS = require(platformsConfig);

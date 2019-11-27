@@ -28,7 +28,7 @@ var androidRepo = { title: 'Android',
     id: 'android',
     repoName: 'cordova-android',
     jiraComponentName: 'Android',
-    cordovaJsPaths: [ 'bin/templates/project/assets/www/cordova.js' ],
+    cordovaJsPaths: ['bin/templates/project/assets/www/cordova.js'],
     remoteName: 'origin' };
 var iosRepo = { title: 'iOS',
     id: 'ios',
