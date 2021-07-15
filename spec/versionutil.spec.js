@@ -100,7 +100,7 @@ describe('versionutil', function () {
     it('Test#002 : checks that the correct ios version is passed in', function * () {
         setupPlatform('ios');
         yield versionutil.updateRepoVersion(iosRepo, testVersion);
-        expectTestVersioninFiles('bin/templates/scripts/cordova/version');
+        expectTestVersioninFiles('CordovaLib/VERSION');
     });
 
     it('Test#003 : checks that the correct windows version is passed in', function * () {
